@@ -8,3 +8,9 @@ import SmartAreaSection from "@components/SmartTextarea/SmartAreaSection.astro";
 <script>
   import "@scripts/viewport-height.ts";
 </script>
+<style>
+  main :global(section) {
+    min-height: var(--vh, 100svh);
+    padding: 2.5rem 1rem;
+  }
+</style>

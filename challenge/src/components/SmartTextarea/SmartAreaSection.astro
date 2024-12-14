@@ -1,1 +1,90 @@
-<section></section>
+<section
+  class="flex items-center justify-center bg-gradient-to-br from-[#0093E9] to-[black]"
+  id="smart-textarea"
+>
+  <div
+    class="grid gap-4 p-4 max-w-[37.5rem] w-full border rounded-lg bg-black text-white"
+  >
+    <div aria-label="smart textarea" class="relative tai-wrapper">
+      <div
+        aria-autocomplete="none"
+        contenteditable="true"
+        class="focus:outline-none relative break-all"
+        id="smart-textarea-input"
+        tabindex="-1"
+      >
+      </div>
+      <span
+        id="placeholder"
+        class="user-none pointer-events-none absolute top-0 left-0 text-[rgba(166,166,166)]"
+        >Anything happening?</span
+      >
+    </div>
+    <span
+      role="progressbar"
+      aria-valuemin="0"
+      aria-valuemax="280"
+      aria-valuenow="0"
+      hidden="true"
+      data-status="ok"
+      class="smart-textarea-count relative aspect-square rounded-full bg-blue-500 w-8 justify-self-end self-center"
+    >
+    </span>
+    <button
+      class="p-2 text-black bg-white rounded-lg justify-self-end font-bold"
+      disabled>Submit</button
+    >
+  </div>
+</section>
+<style>
+  .grid {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas:
+      "smart-textarea smart-textarea smart-textarea"
+      "void           count          cta";
+    .tai-wrapper {
+      grid-area: smart-textarea;
+    }
+    button {
+      grid-area: cta;
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+    .smart-textarea-count {
+      --ring-color: #3b82f6;
+      grid-area: count;
+      background-image: conic-gradient(
+        var(--ring-color) var(--countPercentage, 0%),
+        gray 0%
+      );
+      &[data-status="near"] {
+        --ring-color: yellow;
+      }
+      &::before {
+        content: "";
+        background: #000;
+        inset: 2px;
+        border-radius: inherit;
+        position: absolute;
+      }
+      &[data-status="exceeded"] {
+        --ring-color: red;
+      }
+      &[data-status="exceeded"]::after {
+        content: var(--diff);
+        color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        font-size: 0.75rem;
+      }
+    }
+    #smart-textarea-input .offset-excess {
+      display: inline;
+      background-color: red;
+    }
+  }
+</style>
+<script src="@scripts/smarttextarea.ts"></script>
