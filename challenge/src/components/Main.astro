@@ -1,9 +1,11 @@
 ---
 import SmartAreaSection from "@components/SmartTextarea/SmartAreaSection.astro";
+import DropdownSection from "./Dropdown/DropdownSection.astro";
 ---
 
-<main>
+<main class="bg-gradient-to-br from-[#0093E9] to-[black] bg-fixed">
   <SmartAreaSection />
+  <DropdownSection />
 </main>
 <script>
   import "@scripts/viewport-height.ts";
@@ -11,6 +13,18 @@ import SmartAreaSection from "@components/SmartTextarea/SmartAreaSection.astro";
 <style>
   main :global(section) {
     min-height: var(--vh, 100svh);
+    position: relative;
     padding: 2.5rem 1rem;
+    &::before {
+      content: attr(id);
+      position: absolute;
+      top: 28%;
+      text-transform: lowercase;
+      font-weight: 900;
+      opacity: 0.3;
+      font-size: clamp(2rem, 9vw + 1rem, 9rem);
+      z-index: 0;
+      pointer-events: none;
+    }
   }
 </style>
