@@ -1,48 +1,17 @@
-# Astro Starter Kit: Basics
+# Frontend Quickbytes: Reallife Inspired Challenges (Total: 11)
 
-```sh
-npm create astro@latest -- --template basics
-```
+Here is the list of all challenges -
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. [**Smart Textarea**: Twitter like textarea with character count](https://frontendquickbytes/challenge/#smarttextarea)
+2. [**Dropdown Component with select/multiselect feature** - Similar to React Select](https://frontendquickbytes/challenge/#dropdown)
+3. [**Autosuggest Input**](#autosuggest-input)
+4. [**Manage cookies pop-up**](#manage-cookies-pop-up)
+5. [**Progress Bar**](#progress-bar)
+6. [**Scroll and Fix it!**](#scroll-and-fix-it)
+7. [**Password Module**](#password-module)
+8. [**Multi-step Forms**](#multi-step-forms)
+9. [**Back To Top Button**](#back-to-top-button)
+10. [**Toggle Sidebar**](#toggle-sidebar)
+11. [**Copy to clipboard**](#copy-to-clipboard)
+12. [**Timeline Component**](#timeline-component)
+13. [**Floating Sidebar**](#floating-sidebar)
