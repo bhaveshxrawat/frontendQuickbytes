@@ -177,6 +177,14 @@ function cleanup() {
   input.classList.remove("searchable", "multi");
   input.value = "";
   input.placeholder = "Select...";
+  document.querySelectorAll(".tag").forEach((tag) => {
+    tag.remove();
+  });
+  tagArray = [];
+  list.innerHTML = "";
+  ogOptions.forEach((option) => {
+    list.insertAdjacentHTML("beforeend", createLiOption(option));
+  });
 }
 
 function transformToMulti() {
