@@ -171,16 +171,20 @@ function transformToSearchable() {
   input.addEventListener("input", handleInputType);
 }
 
+function clearAllTags() {
+  document.querySelectorAll(".tag").forEach((tag) => {
+    tag.remove();
+  });
+  tagArray = [];
+}
+
 function cleanup() {
   input.removeEventListener("click", toggleDropdown);
   input.removeEventListener("input", handleInputType);
   input.classList.remove("searchable", "multi");
   input.value = "";
   input.placeholder = "Select...";
-  document.querySelectorAll(".tag").forEach((tag) => {
-    tag.remove();
-  });
-  tagArray = [];
+  clearAllTags();
   list.innerHTML = "";
   ogOptions.forEach((option) => {
     list.insertAdjacentHTML("beforeend", createLiOption(option));
