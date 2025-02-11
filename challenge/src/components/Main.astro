@@ -1,15 +1,15 @@
 ---
 import SmartAreaSection from "@components/SmartTextarea/SmartAreaSection.astro";
 import DropdownSection from "./Dropdown/DropdownSection.astro";
+import AutoSuggestSection from "./AutoSuggest/AutoSuggestSection.astro";
 ---
 
 <main class="bg-gradient-to-br from-[#0093E9] to-[black] bg-fixed">
   <SmartAreaSection />
   <DropdownSection />
+  <AutoSuggestSection />
 </main>
-<script>
-  import "@scripts/viewport-height.ts";
-</script>
+<script src="@scripts/viewport-height.ts"></script>
 <style>
   main :global(section) {
     min-height: var(--vh, 100svh);
