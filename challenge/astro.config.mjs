@@ -6,5 +6,8 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://frontendquickbytes.netlify.app',
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  redirects: {
+    "/": "/challenges"
+  }
 });

@@ -1,0 +1,95 @@
+<section class="flex items-center justify-center" id="cookies-popup">
+  <div class="fixed inset-0 bg-black/20" hidden id="pop-up-wrapper">
+    <div
+      id="pop-up"
+      role="dialog"
+      aria-modal="true"
+      class="absolute bottom-0 mb-4 inset-x-0 border border-black p-4 bg-blue-50 rounded-2xl max-w-[768px] px-4 mx-auto text-blue-"
+      tabindex="-1"
+    >
+      <p>
+        By clicking accepting “All cookies”, you agree we can store cookies on
+        your device and disclose information in accordance with our <a
+          href="#"
+          class="underline">Cookie Policy</a
+        >.
+      </p>
+      <div class="flex items-center gap-2 mt-2">
+        <button class="pref-setter" data-preference="all-cookies"
+          >All cookies</button
+        >
+        <button class="pref-setter" data-preference="necessary-cookies"
+          >Necessary cookies only</button
+        >
+        <button class="pref-setter" data-preference="no-cookies"
+          >No cookies</button
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<script src="@scripts/cookies-popup.ts"></script>
+<style>
+  #pop-up-wrapper {
+    animation: bg-appear 0.3s linear forwards;
+  }
+  @keyframes bg-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #pop-up-wrapper.removing {
+    animation: bg-disappear 0.5s linear forwards;
+  }
+  @keyframes bg-disappear {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #pop-up {
+    animation: appear 0.5s linear forwards;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .removing #pop-up {
+    animation: disappear 0.3s linear forwards;
+  }
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+  .pref-setter {
+    --shadow-depth: 2px;
+    padding: 4px 12px;
+    border: 0.0469rem solid black;
+    border-radius: 0.75rem;
+    box-shadow: 0 var(--shadow-depth) black;
+    &:active {
+      box-shadow: none;
+      transform: translateY(var(--shadow-depth));
+    }
+  }
+</style>
